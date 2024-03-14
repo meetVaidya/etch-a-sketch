@@ -35,4 +35,40 @@ body {
     align-items: center;
     width: 25vh;
     justify-content: space-around;
+    gap: 2vh;
+}
+
+.reset,
+.change,
+.clear {
+    background-color: #4caf50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 15px 32px;
+    transition-duration: 0.4s;
+    width: 200px;
+    height: 55px;
+    border-radius: 12px;
+}
+
+.reset:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #4caf50;
+}
+.change:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #4caf50;
+}
+.clear:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #4caf50;
 }

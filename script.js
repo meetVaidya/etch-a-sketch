@@ -2,6 +2,30 @@ const canvas = document.querySelector('.main-container');
 const button = document.querySelector('.change');
 const body = document.querySelector('body');
 const clear = document.querySelector('.clear');
+let selectColor = 'black';
+
+const dropdown = document.getElementById('dropdown');
+dropdown.addEventListener('change', function () {
+    const selectedValue = this.value;
+    // const selectedText = this.options[this.selectedIndex].text;
+    console.log(selectedValue);
+    if (selectedValue == 'option1') {
+        selectColor = 'pink';
+        console.log(selectColor);
+    } else if (selectedValue == 'option2') {
+        selectColor = 'blue';
+        console.log(selectColor);
+    } else if (selectedValue == 'option3') {
+        selectColor = 'red';
+        console.log(selectColor);
+    } else if (selectedValue == 'option4') {
+        selectColor = 'brown';
+        console.log(selectColor);
+    } else {
+        console.log('Kya hora bhai yeh value hi nahi hai!');
+    }
+});
+
 let paintNow = false;
 let currentSize = 16;
 /* FILL UPON LOADING*/
@@ -17,16 +41,16 @@ window.addEventListener('load', () => {
 
 body.addEventListener('mousedown', () => {
     paintNow = true;
-    console.log(paintNow);
+    // console.log(paintNow);
 });
 body.addEventListener('mouseup', () => {
     paintNow = false;
-    console.log(paintNow);
+    // console.log(paintNow);
 });
 
 canvas.addEventListener('mouseover', (event) => {
     if (paintNow === true && paintNow === true)
-        event.target.style.backgroundColor = 'black';
+        event.target.style.backgroundColor = selectColor;
 });
 
 clear.addEventListener('click', clearGrid);
